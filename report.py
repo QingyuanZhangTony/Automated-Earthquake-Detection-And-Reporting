@@ -122,6 +122,7 @@ class Report:
 
             # Connect to SMTP server
             smtp_obj = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
+            smtp_obj.starttls()
             smtp_obj.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
 
             # Send the email
